@@ -1,0 +1,124 @@
+:root {
+  --font:'Roboto', sans-serif;
+  --color-main: #FFFFFF;
+  --color-header: #FF8984;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 18px var(--font);
+  color: var(--color-main);
+  background-color: #3B3F45;
+  border: 20px solid var(--color-main);
+  min-height: 100vh;
+}
+
+.header,
+footer {
+  color: var(--color-header);
+  background-color: #4A4F56;
+  text-align: center;
+}
+
+.title {
+font-size: 24px;
+font-weight: bold;
+padding-top: 20px;
+}
+
+.slogan {
+  font-size: 16px;
+  padding: 5px 0 15px 0;
+}
+
+.content {
+  max-width: 535px;
+  margin: 0 auto;
+}
+
+.container {
+  margin: 20px 0 45px;
+}
+
+.list {
+  background-color: #88839E;
+  position: relative;
+}
+
+.list:nth-child(even) {
+  background-color: #7A7593;
+}
+
+.small {
+  font-size: 10px;
+  vertical-align: 2px;
+}
+
+.list:hover {
+  border-top: 3px solid var(--color-main);
+  border-bottom: 3px solid var(--color-main);
+  background-color: #625E77;
+}
+
+label {
+  display: block;
+  padding: 15px 50px;
+  cursor: pointer;
+}
+
+input {
+  position: absolute;
+  visibility: hidden;
+}
+
+input::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  visibility: visible;
+  background-color: var(--color-main);
+  margin-top: 13px;
+  margin-left: 15px;
+}
+
+/*input::after {
+  content: "\2714";
+  display: block;
+  text-align: center;
+  font-size: 25px;
+  color: #000000;
+  position: absolute;
+  top: 5px;
+  left: 16px;
+}*/
+
+input::after {
+  content: "";
+  background: url(../images/Vector\ 1.png) no-repeat;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  margin-left: 18px;
+  background-size: 15px;
+  margin-top: -15px;
+}
+
+input:checked::after {
+  visibility: visible;
+}
+
+input:checked + label span{
+  text-decoration: line-through;
+}
+
+label:active {
+  background: var(--color-header);
+}
+
+.content p {
+  padding: 15px 0;
+}
